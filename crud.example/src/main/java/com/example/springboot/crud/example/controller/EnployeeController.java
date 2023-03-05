@@ -48,15 +48,7 @@ public class EnployeeController {
 	}
 	
 
-	/*@ExceptionHandler({UserNotFoundException.class})
-	public ResponseEntity<Object> handleUserNotFoundException( UserNotFoundException ex
-			,HttpStatus status,HttpHeaders headers){
-		
-		Map<String,Object> body=new HashMap<>();
-		body.put("errorMessage",ex.getMessage());
-		return new ResponseEntity<Object>("Message",headers,HttpStatus.BAD_REQUEST);
-		
-	}*/
+	
 	/*@ExceptionHandler({UserNotFoundException.class})
 	public ResponseEntity<Object> handleUserNotFoundException( UserNotFoundException ex
 			,HttpStatus status,HttpHeaders headers){
