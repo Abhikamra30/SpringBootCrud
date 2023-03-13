@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class HeadOffice {
 
 	private int id;
+	private String namemanager;
 }
