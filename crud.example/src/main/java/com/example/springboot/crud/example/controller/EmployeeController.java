@@ -4,6 +4,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,14 +13,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.springboot.crud.example.entity.Department;
 import com.example.springboot.crud.example.entity.Employee;
 import com.example.springboot.crud.example.service.EmployeeService;
 
 @RestController
-public class EnployeeController {
+public class EmployeeController {
 
 	@Autowired
 	private EmployeeService empService;
+	
+	
 	
 	@PostMapping(path="/addEmployee")
 	public ResponseEntity<Employee> addEmployee(@RequestBody  @Valid Employee emp){
@@ -47,6 +52,8 @@ public class EnployeeController {
 		return new ResponseEntity<Employee>(empService.updateEmployee(emp),HttpStatus.OK);
 	}
 	
+	
+	
 
 	
 	/*@ExceptionHandler({UserNotFoundException.class})
@@ -68,5 +75,11 @@ public class EnployeeController {
 				  body , new HttpHeaders(), HttpStatus.FORBIDDEN);
 	    }*/
 	
+	@GetMapping(path="/department")
+	public ResponseEntity<String> addStudent(@RequestBody  @Valid Department stu){
+		System.out.println("======================>"+stu.getDepName());
+		//System.out.println("======================>"+stu.getFinance().getLastName());
+			return new ResponseEntity<>("Depat",HttpStatus.CREATED);
+	}
 	
 }

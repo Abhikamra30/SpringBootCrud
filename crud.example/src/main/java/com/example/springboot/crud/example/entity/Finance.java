@@ -2,7 +2,6 @@ package com.example.springboot.crud.example.entity;
 
 import java.math.BigDecimal;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -12,11 +11,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Department {
+public class Finance {
 
-	@NotNull(message="Depat name cannot be null")
-	private String depName;
 	
-	@Valid
-	private Finance finance;
+	@NotNull(message="Finance lastname cannot be null")
+	private String lastName;
 }

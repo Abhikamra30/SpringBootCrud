@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.Valid;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Max;
@@ -15,15 +16,19 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="Student")
+@Table(name="Employee")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+//@Component
 public class Employee {
 
 	@Id
@@ -47,5 +52,10 @@ public class Employee {
 	@NotNull(message="Age is required")
 	@Max(value=50,message="Age cannot be more than 50" )
 	@Min(value=6,message="Age cannot be less than 6")
+	@Value("${emp.age:100}")
 	private Integer age;
+	
+	
+
+	
 }
