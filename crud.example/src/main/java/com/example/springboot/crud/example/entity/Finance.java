@@ -16,4 +16,5 @@ public class Finance {
 	
 	@NotNull(message="Finance lastname cannot be null")
 	private String lastName;
+	private String firstName;
 }
