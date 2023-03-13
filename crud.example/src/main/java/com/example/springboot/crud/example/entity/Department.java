@@ -16,7 +16,8 @@ public class Department {
 
 	@NotNull(message="Depat name cannot be null")
 	private String depName;
-	
+	@NotNull(message="Depat name cannot be null")
+	private Integer depNo;
 	@Valid
 	private Finance finance;
 	private String deptManagerName;
