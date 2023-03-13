@@ -19,4 +19,5 @@ public class Department {
 	
 	@Valid
 	private Finance finance;
+	private String deptManagerName;
 }
