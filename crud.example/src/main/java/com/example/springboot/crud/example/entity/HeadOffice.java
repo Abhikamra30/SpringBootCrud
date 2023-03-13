@@ -9,9 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class HeadOffice {
 
-	private String HeadOfficeManager;
-	private String officeNum;
-	private String officeEmployeeName;
-	private Integer officeEmployee1;
-	private String officeEmployeeLastName;
+	private int id;
 }
