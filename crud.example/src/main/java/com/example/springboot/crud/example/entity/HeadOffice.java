@@ -13,5 +13,5 @@ public class HeadOffice {
 	private String officeNum;
 	private String officeEmployeeName;
 	private Integer officeEmployee1;
-	
+	private String officeEmployeeLastName;
 }
