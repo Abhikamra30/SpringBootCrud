@@ -11,4 +11,5 @@ public class HeadOffice {
 
 	private String HeadOfficeManager;
 	private String officeNum;
+	private String officeEmployeeName;
 }
